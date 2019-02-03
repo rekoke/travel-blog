@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import COUNTRIES from './constants/countries';
 import Country from './components/Country';
+import CardDestination from './components/CardDestination';
 import firebase from './Firebase';
+import './App.css';
 
 class Countries extends React.Component {
   constructor(props) {
@@ -29,23 +30,12 @@ class Countries extends React.Component {
   render() {
     const { data } = this.state;
     return (
-      <ul>
-        <li>
+      <div>
+        <span>
           <Link to="/">Home</Link>
-        </li>
-        {COUNTRIES.map(country => (
-          <li>
-            <img src={data[country.country]} alt="country-img" />
-            <Link
-              to={{
-                pathname: `/${country.country}`,
-                state: { country: country.country }
-              }}
-            />
-            <span>{country.country}</span>
-          </li>
-        ))}
-      </ul>
+        </span>
+        <CardDestination data={data} />
+      </div>
     );
   }
 }
