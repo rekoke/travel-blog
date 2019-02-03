@@ -1,0 +1,13 @@
+[debug] [2019-02-03T01:45:05.702Z] ----------------------------------------------------------------------
+[debug] [2019-02-03T01:45:05.704Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-02-03T01:45:05.705Z] CLI Version:   6.3.1
+[debug] [2019-02-03T01:45:05.705Z] Platform:      darwin
+[debug] [2019-02-03T01:45:05.705Z] Node Version:  v8.12.0
+[debug] [2019-02-03T01:45:05.705Z] Time:          Sun Feb 03 2019 09:45:05 GMT+0800 (WITA)
+[debug] [2019-02-03T01:45:05.705Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-02-03T01:45:05.715Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-02-03T01:45:05.716Z] > authorizing via signed-in user
+[debug] [2019-02-03T01:45:05.716Z] [iam] checking project travel-blog-96dd9 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-02-03T01:45:05.717Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/travel-blog-96dd9:testIamPermissions  
+

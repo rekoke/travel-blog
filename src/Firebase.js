@@ -1,4 +1,4 @@
-import * as firebase from 'Firebase';
+import * as firebase from 'firebase';
 import DB_KEYS from './keys';
 
 const config = {
