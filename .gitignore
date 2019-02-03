@@ -4,6 +4,14 @@
 /node_modules
 /.pnp
 .pnp.js
+.eslintrc.js
+.firebase/
+.firebaserc
+firebase.json
+public/404.html
+src/keys.js
+.prettierrc
+.eslintrc
 
 # testing
 /coverage
