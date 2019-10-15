@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.4.3",
     "firebase": "^5.8.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "react-dropdown": "^1.6.4",
+    "react-materialize": "^3.4.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.3"
   },

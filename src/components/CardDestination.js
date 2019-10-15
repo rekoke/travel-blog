@@ -2,10 +2,6 @@
 import React from 'react';
 import COUNTRIES from '../constants/countries';
 import { Link } from 'react-router-dom';
-import africa from '../assets/icon-africa.svg';
-import america from '../assets/icon-africa.svg';
-import europa from '../assets/icon-africa.svg';
-import asia from '../assets/icon-africa.svg';
 
 export default class CardDestination extends React.Component {
   render() {
