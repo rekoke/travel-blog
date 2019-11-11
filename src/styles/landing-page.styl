@@ -1,0 +1,87 @@
+.landing-page
+    background-color white
+    background url("http://api.thumbr.it/whitenoise-361x370.png?background=fafafaff&noise=595959&density=47&opacity=5")
+    min-height 100vh
+    padding-bottom 40px
+    &__header
+        height 60vh
+        max-height 100%
+        background-color black
+        position relative
+        margin-bottom 100px
+        &__bgimage
+            max-height inherit
+            height inherit
+            &__image
+                object-fit cover
+                max-height inherit
+                height inherit
+                width 100vw
+                filter brightness(70%)
+            &__text-container
+                position absolute
+                top 0
+                color white
+                transform translate(-50%, 0)
+                left 50%
+                padding 0px 15px
+                height 100%
+                width 100%
+                max-width 960px
+                &__sub
+                    top 50%
+                    transform translateY(-50%)
+                    position relative
+                    &__title
+                        font-size 4em
+                        line-height 1em
+                        text-transform uppercase
+                        margin-bottom 20px
+                    &__country-continent
+                        font-size 1.3em
+                        text-transform uppercase
+    &__body
+        max-width 960px
+        width 100%
+        margin 0 auto
+        padding-bottom 200px
+        &__text
+            font-size 1.2em
+            line-height 1.5em
+            margin-bottom 100px
+        &__carrousel
+            height 500px
+            width 100%
+            max-width 960px
+            background-color transparent
+            overflow hidden
+            display flex
+            align-items flex-end
+            position relative
+            &__inner
+                overflow hidden
+                display flex
+                position absolute
+                height 100%
+                width inherit
+                flex-wrap wrap
+                margin 0 auto
+                justify-content center
+                &__image
+                    max-height inherit
+                    max-width 250px
+                    max-height 250px
+                    height 100%
+                    width 100%
+                    object-fit cover
+                    opacity .8
+                    transition all .3s ease
+                    display block
+                    &:hover
+                        opacity 1
+    &__footer
+        width 100vw
+        &__copyright
+            margin 0 auto
+            display flex
+            justify-content center
