@@ -8,14 +8,26 @@ function Landing({
   country,
   continent,
   text,
-  imagesCarrousel
+  imagesCarrousel,
+  imageClicked,
+  active,
+  handleClose,
+  handleArr
 }) {
-  const carrousel = imagesCarrousel.map(item => (
-    <img
-      className="landing-page__body__carrousel__inner__image"
-      src={item}
-      alt="bgImg"
-    />
+  const carrousel = imagesCarrousel.map((item, index) => (
+    <div
+      className={`landing-page__body__carrousel__inner__image-container ${
+        active === index ? '-selected' : ''
+      }`}
+    >
+      <img
+        className="landing-page__body__carrousel__inner__image-container__image"
+        src={item}
+        alt="bgImg"
+        onClick={() => imageClicked(index)}
+        id={`imageposition_${index}`}
+      />
+    </div>
   ));
   return (
     <div className={`landing-page ${className}`}>
@@ -42,6 +54,34 @@ function Landing({
         <div className="landing-page__body__text">{text}</div>
         <div className="landing-page__body__carrousel">
           <div className="landing-page__body__carrousel__inner">
+            {active !== null ? (
+              <img
+                src="/assets/icon-close.png"
+                className="landing-page__body__carrousel__inner__close"
+                onClick={() => handleClose()}
+                onKeyDown={() => {}}
+                alt="close"
+              />
+            ) : null}
+            {active !== null && active !== 0 ? (
+              <img
+                src="/assets/icon-arrow.png"
+                className="landing-page__body__carrousel__inner__arrL"
+                onClick={() => handleArr('L')}
+              />
+            ) : null}
+            {active !== null && active !== 5 ? (
+              <img
+                src="/assets/icon-arrow.png"
+                className="landing-page__body__carrousel__inner__arrR"
+                onClick={() => handleArr('R')}
+              />
+            ) : null}
+            {active !== null ? (
+              <div className="landing-page__body__carrousel__inner__counter">
+                {active + 1}/6
+              </div>
+            ) : null}
             {carrousel}
           </div>
         </div>
@@ -61,7 +101,11 @@ Landing.defaultProps = {
   title: '',
   country: '',
   continent: '',
-  imagesCarrousel: []
+  imagesCarrousel: [],
+  imageClicked: () => {},
+  active: null,
+  handleClose: () => {},
+  handleArr: () => {}
 };
 
 Landing.propTypes = {
@@ -70,7 +114,11 @@ Landing.propTypes = {
   title: PropTypes.string,
   country: PropTypes.string,
   continent: PropTypes.string,
-  imagesCarrousel: PropTypes.instanceOf(Array)
+  imagesCarrousel: PropTypes.instanceOf(Array),
+  imageClicked: PropTypes.func,
+  active: PropTypes.number,
+  handleClose: PropTypes.func,
+  handleArr: PropTypes.func
 };
 
 export default Landing;
