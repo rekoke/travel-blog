@@ -9,6 +9,7 @@
         background-color black
         position relative
         margin-bottom 100px
+        font-family 'Anton'
         &__bgimage
             max-height inherit
             height inherit
@@ -33,18 +34,21 @@
                     transform translateY(-50%)
                     position relative
                     &__title
-                        font-size 4em
+                        font-size 5.5em
                         line-height 1em
                         text-transform uppercase
                         margin-bottom 20px
+                        letter-spacing 0.02em
                     &__country-continent
-                        font-size 1.3em
+                        font-size 1.5em
                         text-transform uppercase
+                        letter-spacing .1em
     &__body
         max-width 960px
         width 100%
         margin 0 auto
         padding-bottom 200px
+        font-family 'Montserrat'
         &__text
             font-size 1.2em
             line-height 1.5em
@@ -93,7 +97,25 @@
                         cursor pointer
                         &:hover
                             opacity .3
-                            filter: opacity(0.5);
+                            filter opacity(0.5)
+                    &__text
+                        font-family 'Montserrat'
+                        display block
+                        position absolute
+                        display flex
+                        width 100%
+                        left 0
+                        bottom 0
+                        background-color black
+                        z-index 1
+                        color white
+                        height 50px
+                        text-align center
+                        padding 5px 10px
+                        box-sizing border-box
+                        font-size 1.1em
+                        opacity 0
+                        padding-top 10px
                     &.-selected
                         height 500px
                         width 100%
@@ -103,16 +125,25 @@
                         min-height 100%
                         left 0
                         background-color black
-                        .landing-page__body__carrousel__inner__image-container__image
-                            height 100%
-                            min-height 100%
-                            min-width 100%
-                            width 100%
-                            transition opacity 1s
-                            animation slide .6s
-                            &:hover
-                                opacity 1
-                                filter opacity(1)
+                        .landing-page__body__carrousel__inner__image-container
+                            &__image
+                                height 100%
+                                min-height 100%
+                                min-width 100%
+                                width 100%
+                                transition opacity 1s
+                                animation slide .6s
+                                &:hover
+                                    opacity 1
+                                    filter opacity(1)
+                            &__text
+                                opacity .3
+                                transition opacity 1s
+                        &:hover
+                            .landing-page__body__carrousel__inner__image-container
+                                &__text
+                                    opacity .85
+
                 &__close-container
                     z-index 2
                     cursor pointer
@@ -166,6 +197,7 @@
                         cursor pointer
                         height 30px
     &__footer
+        font-family 'Montserrat'
         width 100vw
         &__copyright
             margin 0 auto

@@ -28,6 +28,12 @@ function Landing({
         alt="bgImg"
         id={`imageposition_${index}`}
       />
+      <div className="landing-page__body__carrousel__inner__image-container__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar
+        molestie velit id hendrerit. Maecenas ligula nulla, accumsan nec dapibus
+        sed, pellentesque quis sapien. Fusce malesuada lectus neque, id
+        fringilla velit scelerisque sed.
+      </div>
     </button>
   ));
   return (

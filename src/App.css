@@ -40,6 +40,7 @@
   background-color: #000;
   position: relative;
   margin-bottom: 100px;
+  font-family: 'Anton';
 }
 .landing-page__header__bgimage {
   max-height: inherit;
@@ -69,20 +70,23 @@
   position: relative;
 }
 .landing-page__header__bgimage__text-container__sub__title {
-  font-size: 4em;
+  font-size: 5.5em;
   line-height: 1em;
   text-transform: uppercase;
   margin-bottom: 20px;
+  letter-spacing: 0.02em;
 }
 .landing-page__header__bgimage__text-container__sub__country-continent {
-  font-size: 1.3em;
+  font-size: 1.5em;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 .landing-page__body {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
   padding-bottom: 200px;
+  font-family: 'Montserrat';
 }
 .landing-page__body__text {
   font-size: 1.2em;
@@ -140,6 +144,25 @@
   opacity: 0.3;
   filter: opacity(0.5);
 }
+.landing-page__body__carrousel__inner__image-container__text {
+  font-family: 'Montserrat';
+  display: block;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+  z-index: 1;
+  color: #fff;
+  height: 50px;
+  text-align: center;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  font-size: 1.1em;
+  opacity: 0;
+  padding-top: 10px;
+}
 .landing-page__body__carrousel__inner__image-container.-selected {
   height: 500px;
   width: 100%;
@@ -163,6 +186,15 @@
   .landing-page__body__carrousel__inner__image-container__image:hover {
   opacity: 1;
   filter: opacity(1);
+}
+.landing-page__body__carrousel__inner__image-container.-selected
+  .landing-page__body__carrousel__inner__image-container__text {
+  opacity: 0.3;
+  transition: opacity 1s;
+}
+.landing-page__body__carrousel__inner__image-container.-selected:hover
+  .landing-page__body__carrousel__inner__image-container__text {
+  opacity: 0.85;
 }
 .landing-page__body__carrousel__inner__close-container {
   z-index: 2;
@@ -220,6 +252,7 @@
   height: 30px;
 }
 .landing-page__footer {
+  font-family: 'Montserrat';
   width: 100vw;
 }
 .landing-page__footer__copyright {
@@ -258,6 +291,16 @@
   100% {
     filter: opacity(1);
   }
+}
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  src: url('styles/fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+  font-family: Anton;
+  font-style: normal;
+  src: url('styles/fonts/Anton-Regular.ttf');
 }
 body {
   background-color: #fff;
