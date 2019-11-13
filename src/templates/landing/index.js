@@ -15,19 +15,20 @@ function Landing({
   handleArr
 }) {
   const carrousel = imagesCarrousel.map((item, index) => (
-    <div
+    <button
       className={`landing-page__body__carrousel__inner__image-container ${
         active === index ? '-selected' : ''
       }`}
+      onClick={() => imageClicked(index)}
+      type="button"
     >
       <img
         className="landing-page__body__carrousel__inner__image-container__image"
         src={item}
         alt="bgImg"
-        onClick={() => imageClicked(index)}
         id={`imageposition_${index}`}
       />
-    </div>
+    </button>
   ));
   return (
     <div className={`landing-page ${className}`}>
@@ -55,27 +56,43 @@ function Landing({
         <div className="landing-page__body__carrousel">
           <div className="landing-page__body__carrousel__inner">
             {active !== null ? (
-              <img
-                src="/assets/icon-close.png"
-                className="landing-page__body__carrousel__inner__close"
+              <button
+                className="landing-page__body__carrousel__inner__close-container"
+                type="button"
                 onClick={() => handleClose()}
-                onKeyDown={() => {}}
-                alt="close"
-              />
+              >
+                <img
+                  src="/assets/icon-close.png"
+                  className="landing-page__body__carrousel__inner__close-container__close"
+                  alt="close"
+                />
+              </button>
             ) : null}
             {active !== null && active !== 0 ? (
-              <img
-                src="/assets/icon-arrow.png"
-                className="landing-page__body__carrousel__inner__arrL"
+              <button
+                className="landing-page__body__carrousel__inner__arrL-container"
+                type="button"
                 onClick={() => handleArr('L')}
-              />
+              >
+                <img
+                  src="/assets/icon-arrow.png"
+                  className="landing-page__body__carrousel__inner__arrL-container__arrL"
+                  alt="arrowL"
+                />
+              </button>
             ) : null}
             {active !== null && active !== 5 ? (
-              <img
-                src="/assets/icon-arrow.png"
-                className="landing-page__body__carrousel__inner__arrR"
+              <button
+                className="landing-page__body__carrousel__inner__arrR-container"
+                type="button"
                 onClick={() => handleArr('R')}
-              />
+              >
+                <img
+                  src="/assets/icon-arrow.png"
+                  className="landing-page__body__carrousel__inner__arrR-container__arrR"
+                  alt="arrowR"
+                />
+              </button>
             ) : null}
             {active !== null ? (
               <div className="landing-page__body__carrousel__inner__counter">

@@ -112,6 +112,14 @@
 }
 .landing-page__body__carrousel__inner__image-container {
   user-select: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  max-width: 250px;
+  max-height: 250px;
+  height: 100%;
+  width: 100%;
+  padding: 0;
 }
 .landing-page__body__carrousel__inner__image-container:hover {
   background: url('img/eye-icon.png') center center no-repeat;
@@ -156,15 +164,25 @@
   opacity: 1;
   filter: opacity(1);
 }
-.landing-page__body__carrousel__inner__close {
+.landing-page__body__carrousel__inner__close-container {
   z-index: 2;
-  color: #fff;
   cursor: pointer;
   height: 30px;
   width: 30px;
   position: absolute;
   left: 15px;
   top: 15px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.landing-page__body__carrousel__inner__close-container__close {
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .landing-page__body__carrousel__inner__counter {
   z-index: 2;
@@ -174,28 +192,32 @@
   right: 15px;
   top: 20px;
 }
-.landing-page__body__carrousel__inner__arrL,
-.landing-page__body__carrousel__inner__arrR {
-  z-index: 2;
-  color: #000;
-  cursor: pointer;
-  height: 30px;
-}
-.landing-page__body__carrousel__inner__arrL {
+.landing-page__body__carrousel__inner__arrL-container__arrL {
   position: absolute;
   left: -50px;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 2;
+  background: transparent;
+  border: none;
+  outline: none;
   transform: rotate(90deg);
   transform-origin: top;
+  color: #000;
+  cursor: pointer;
+  height: 30px;
 }
-.landing-page__body__carrousel__inner__arrR {
+.landing-page__body__carrousel__inner__arrR-container__arrR {
   position: absolute;
   right: -75px;
   top: 50%;
   transform: translateY(-50%);
   transform: rotate(270deg);
   transform-origin: left;
+  z-index: 2;
+  color: #000;
+  cursor: pointer;
+  height: 30px;
 }
 .landing-page__footer {
   width: 100vw;
