@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.4.3",
-    "firebase": "^5.8.2",
+    "firebase": "^10.9.0",
     "materialize-css": "^1.0.0-rc.2",
     "prop-types": "^15.7.2",
     "react": "^16.10.1",
